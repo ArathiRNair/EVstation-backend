@@ -39,6 +39,10 @@ app.post("/add-veh",async(req,res)=>{
     res.json({"status":"success"})
 })
 
+app.post("/view-veh",async(req,res)=>{
+    const evstation=await ev.find()
+    res.json(evstation)
+})
 
 
 
